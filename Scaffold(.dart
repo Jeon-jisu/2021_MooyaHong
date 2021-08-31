@@ -1,24 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:club_app/page/board/notice_board/notice_page.dart';
-import 'package:club_app/page/board/notice_board/create_notice_page.dart';
-
-class AdBoardPage extends StatefulWidget {
-  const AdBoardPage({Key? key}) : super(key: key);
-
-  @override
-  _AdBoardPageState createState() => _AdBoardPageState();
-}
-
-class _AdBoardPageState extends State<AdBoardPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: Text('홍보 게시판', style: TextStyle(color: Colors.black)),
+Scaffold(
+      appBar: AppBar( 
+          backgroundColor: Colors.lightGreen,
+          title: Text('홍보 게시판', style: TextStyle(color: Colors.white)),
           leading: IconButton(
             icon: Icon(Icons.close),
             onPressed: () => Navigator.of(context).pop(),
-          )),
+          ),
+         
+          ),
       body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -103,5 +92,3 @@ class _AdBoardPageState extends State<AdBoardPage> {
             ],
           )),
     );
-  }
-}
